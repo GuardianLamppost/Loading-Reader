@@ -35,6 +35,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="CachedImageFetcher.cs" />
+    <Compile Include="Entitites\CategoryListCategory.cs" />
+    <Compile Include="Entitites\CategoryListForum.cs" />
+    <Compile Include="Entitites\CategoryListItem.cs" />
     <Compile Include="Entitites\ThreadListThread.cs" />
     <Compile Include="Image.cs" />
     <Compile Include="LoadingClient.cs" />

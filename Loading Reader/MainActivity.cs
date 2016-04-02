@@ -70,18 +70,16 @@ namespace GuardianLamppost.LoadingReader {
             }
         }
 
-        int oldPosition = -1;
         private void ListItemClicked(int position) {
-            //this way we don't load twice, but you might want to modify this a bit.
-            if (position == oldPosition)
-                return;
-
-            oldPosition = position;
 
             Android.Support.V4.App.Fragment fragment = null;
             switch (position) {
                 case 0:
-                    fragment = ThreadListFragment.NewInstance();
+                    if (!LoadingReader.LoadingClient.IsCategorisedView) {
+                        fragment = CategoryListFragment.NewInstance();
+                    } else {
+                        fragment = ThreadListFragment.NewInstance();
+                    }
                     break;
             }
 
@@ -89,6 +87,8 @@ namespace GuardianLamppost.LoadingReader {
                 .Replace(Resource.Id.content_frame, fragment)
                 .Commit();
         }
+
+
 
         public override bool OnOptionsItemSelected(IMenuItem item) {
             switch (item.ItemId) {

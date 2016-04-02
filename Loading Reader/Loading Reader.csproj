@@ -72,6 +72,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ListAdapters\CategoryListAdapter.cs" />
     <Compile Include="LoadingReader.cs" />
     <Compile Include="BaseActivity.cs" />
     <Compile Include="Fragments\CategoryListFragment.cs" />
@@ -102,6 +103,12 @@
     <AndroidResource Include="Resources\layout\categoryListFragment.axml" />
     <AndroidResource Include="Resources\layout\threadListFragment.axml" />
     <AndroidResource Include="Resources\layout\threadListItem.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\categoryListCategory.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\categoryListForum.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -214,6 +221,7 @@
   <ItemGroup>
     <Content Include="LICENSE.txt" />
     <AndroidResource Include="Resources\menu\thread_list_long_press.xml" />
+    <AndroidResource Include="Resources\drawable\separatorGradient.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

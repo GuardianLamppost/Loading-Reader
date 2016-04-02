@@ -8,12 +8,13 @@ using GuardianLamppost.LoadingReader.Common.Entitites;
 using GuardianLamppost.LoadingReader.Common.Readers;
 using System.IO;
 using System.Net.Http;
+using HtmlAgilityPack;
 
 namespace GuardianLamppost.LoadingReader.Common {
     public class LoadingClient {
         public ForumReader ForumReader { get; set; }
         private CookieContainer Session { get; set; }
-
+        public bool IsCategorisedView { get; set; }
         public LoadingClient() {
             Session = new CookieContainer();
             var initialRequest = WebRequest.CreateHttp("http://loading.se/forum.php");
@@ -22,9 +23,8 @@ namespace GuardianLamppost.LoadingReader.Common {
             if (!initialRequestTask.Wait(10000)) {
                 throw new Exception("Kunde inte kontakta loading.se");
             }
-            var result = initialRequestTask.Result;
-
-            ForumReader = new ForumReader(initialRequest.CookieContainer);
+            initialRequestTask.Result.Dispose();
+            ForumReader = new ForumReader(initialRequest.CookieContainer, this);
         }
 
         public async Task<bool> Login(string username, string password) {

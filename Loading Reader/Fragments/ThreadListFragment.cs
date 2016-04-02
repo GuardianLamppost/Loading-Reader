@@ -1,3 +1,4 @@
+using Android.Content;
 using Android.OS;
 using Android.Support.V4.App;
 using Android.Support.V4.Widget;
@@ -5,6 +6,7 @@ using Android.Views;
 using Android.Widget;
 using GuardianLamppost.LoadingReader.Common.Entitites;
 using GuardianLamppost.LoadingReader.ListAdapters;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -56,7 +58,11 @@ namespace GuardianLamppost.LoadingReader.Fragments {
                 Activity.RunOnUiThread(() => {
                     ProgressDialog.Hide();
                     Threads = task.Result;
-                    UpdateThreads();
+                    if (Threads == null) {
+                        Activity.Recreate();
+                    } else {
+                        UpdateThreads();
+                    }
                 });
             });
         }
