@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Loading Reader</string>
+  <string name="Username">Användarnamn</string>
+  <string name="Password">Lösenord</string>
+  <string name="Login">Logga in</string>
+  <string name="fragment1">You are on Fragment 1</string>
+</resources>
