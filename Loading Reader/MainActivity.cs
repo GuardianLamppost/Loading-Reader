@@ -16,7 +16,7 @@ using GuardianLamppost.LoadingReader.Fragments;
 
 namespace GuardianLamppost.LoadingReader {
     [Activity(Label = "MainActivity", Icon = "@drawable/Icon")]
-    public class ThreadListActivity : BaseActivity {
+    public class MainActivity : BaseActivity {
         protected override int LayoutResource {
             get {
                 return Resource.Layout.Main;

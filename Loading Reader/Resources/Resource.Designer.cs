@@ -1649,19 +1649,19 @@ namespace GuardianLamppost.LoadingReader
 			public const int fab_background = 2130837565;
 			
 			// aapt resource value: 0x7f02003e
-			public const int ic_home_1 = 2130837566;
+			public const int headerBackground = 2130837566;
 			
 			// aapt resource value: 0x7f02003f
-			public const int ic_home_2 = 2130837567;
+			public const int ic_home_1 = 2130837567;
 			
 			// aapt resource value: 0x7f020040
-			public const int ic_menu = 2130837568;
+			public const int ic_home_2 = 2130837568;
 			
 			// aapt resource value: 0x7f020041
-			public const int Icon = 2130837569;
+			public const int ic_menu = 2130837569;
 			
 			// aapt resource value: 0x7f020042
-			public const int loginHeaderBackground = 2130837570;
+			public const int Icon = 2130837570;
 			
 			// aapt resource value: 0x7f020045
 			public const int notification_template_icon_bg = 2130837573;
@@ -1742,8 +1742,8 @@ namespace GuardianLamppost.LoadingReader
 			// aapt resource value: 0x7f0b0014
 			public const int beginning = 2131427348;
 			
-			// aapt resource value: 0x7f0b0083
-			public const int blogs = 2131427459;
+			// aapt resource value: 0x7f0b008b
+			public const int blogs = 2131427467;
 			
 			// aapt resource value: 0x7f0b002a
 			public const int bottom = 2131427370;
@@ -1783,6 +1783,9 @@ namespace GuardianLamppost.LoadingReader
 			
 			// aapt resource value: 0x7f0b006f
 			public const int content_frame = 2131427439;
+			
+			// aapt resource value: 0x7f0b0084
+			public const int createdByText = 2131427460;
 			
 			// aapt resource value: 0x7f0b004c
 			public const int custom = 2131427404;
@@ -1844,8 +1847,8 @@ namespace GuardianLamppost.LoadingReader
 			// aapt resource value: 0x7f0b0038
 			public const int @fixed = 2131427384;
 			
-			// aapt resource value: 0x7f0b007e
-			public const int forum = 2131427454;
+			// aapt resource value: 0x7f0b0086
+			public const int forum = 2131427462;
 			
 			// aapt resource value: 0x7f0b0004
 			public const int home = 2131427332;
@@ -1865,6 +1868,15 @@ namespace GuardianLamppost.LoadingReader
 			// aapt resource value: 0x7f0b007c
 			public const int info = 2131427452;
 			
+			// aapt resource value: 0x7f0b0085
+			public const int lastChangedByText = 2131427461;
+			
+			// aapt resource value: 0x7f0b008c
+			public const int last_page = 2131427468;
+			
+			// aapt resource value: 0x7f0b008d
+			public const int last_read_page = 2131427469;
+			
 			// aapt resource value: 0x7f0b0033
 			public const int left = 2131427379;
 			
@@ -1873,6 +1885,12 @@ namespace GuardianLamppost.LoadingReader
 			
 			// aapt resource value: 0x7f0b007a
 			public const int line3 = 2131427450;
+			
+			// aapt resource value: 0x7f0b0080
+			public const int linearLayout1 = 2131427456;
+			
+			// aapt resource value: 0x7f0b0082
+			public const int linearLayout2 = 2131427458;
 			
 			// aapt resource value: 0x7f0b000a
 			public const int listMode = 2131427338;
@@ -1901,8 +1919,8 @@ namespace GuardianLamppost.LoadingReader
 			// aapt resource value: 0x7f0b001a
 			public const int never = 2131427354;
 			
-			// aapt resource value: 0x7f0b0082
-			public const int news = 2131427458;
+			// aapt resource value: 0x7f0b008a
+			public const int news = 2131427466;
 			
 			// aapt resource value: 0x7f0b000f
 			public const int none = 2131427343;
@@ -1922,8 +1940,8 @@ namespace GuardianLamppost.LoadingReader
 			// aapt resource value: 0x7f0b0029
 			public const int pin = 2131427369;
 			
-			// aapt resource value: 0x7f0b0081
-			public const int pm = 2131427457;
+			// aapt resource value: 0x7f0b0089
+			public const int pm = 2131427465;
 			
 			// aapt resource value: 0x7f0b0005
 			public const int progress_circular = 2131427333;
@@ -1931,8 +1949,8 @@ namespace GuardianLamppost.LoadingReader
 			// aapt resource value: 0x7f0b0006
 			public const int progress_horizontal = 2131427334;
 			
-			// aapt resource value: 0x7f0b0080
-			public const int quotes = 2131427456;
+			// aapt resource value: 0x7f0b0088
+			public const int quotes = 2131427464;
 			
 			// aapt resource value: 0x7f0b0051
 			public const int radio = 2131427409;
@@ -2024,6 +2042,9 @@ namespace GuardianLamppost.LoadingReader
 			// aapt resource value: 0x7f0b0062
 			public const int submit_area = 2131427426;
 			
+			// aapt resource value: 0x7f0b007e
+			public const int swipe_refresh_layout = 2131427454;
+			
 			// aapt resource value: 0x7f0b000c
 			public const int tabMode = 2131427340;
 			
@@ -2038,6 +2059,15 @@ namespace GuardianLamppost.LoadingReader
 			
 			// aapt resource value: 0x7f0b0068
 			public const int textView1 = 2131427432;
+			
+			// aapt resource value: 0x7f0b007f
+			public const int threadListView = 2131427455;
+			
+			// aapt resource value: 0x7f0b0081
+			public const int threadStatusImage = 2131427457;
+			
+			// aapt resource value: 0x7f0b0083
+			public const int threadTitle = 2131427459;
 			
 			// aapt resource value: 0x7f0b0077
 			public const int time = 2131427447;
@@ -2072,8 +2102,8 @@ namespace GuardianLamppost.LoadingReader
 			// aapt resource value: 0x7f0b0009
 			public const int view_offset_helper = 2131427337;
 			
-			// aapt resource value: 0x7f0b007f
-			public const int watched = 2131427455;
+			// aapt resource value: 0x7f0b0087
+			public const int watched = 2131427463;
 			
 			// aapt resource value: 0x7f0b001b
 			public const int withText = 2131427355;
@@ -2276,7 +2306,10 @@ namespace GuardianLamppost.LoadingReader
 			public const int threadListFragment = 2130903088;
 			
 			// aapt resource value: 0x7f030031
-			public const int toolbar = 2130903089;
+			public const int threadListItem = 2130903089;
+			
+			// aapt resource value: 0x7f030032
+			public const int toolbar = 2130903090;
 			
 			static Layout()
 			{
@@ -2293,6 +2326,9 @@ namespace GuardianLamppost.LoadingReader
 			
 			// aapt resource value: 0x7f0d0000
 			public const int nav_menu = 2131558400;
+			
+			// aapt resource value: 0x7f0d0001
+			public const int thread_list_long_press = 2131558401;
 			
 			static Menu()
 			{

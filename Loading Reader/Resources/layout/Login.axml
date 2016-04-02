@@ -24,7 +24,7 @@
             android:id="@+id/textView1"
             android:textColor="@android:color/white"
             android:layout_marginBottom="15dp"
-            android:background="@drawable/loginheaderbackground"
+            android:background="@drawable/headerbackground"
             android:padding="10dp"
             android:textStyle="bold" />
         <EditText

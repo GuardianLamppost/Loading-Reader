@@ -6,6 +6,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using HtmlAgilityPack;
+using System.Diagnostics;
 
 namespace GuardianLamppost.LoadingReader.Common.Readers {
     public class ForumReader : Reader {
@@ -15,19 +16,21 @@ namespace GuardianLamppost.LoadingReader.Common.Readers {
             base(session) {
         }
 
-        public IEnumerable<ThreadListThread> GetThreads() {
-            var request = WebRequest.CreateHttp(BaseUrl);
+        public async Task<List<ThreadListThread>> GetThreads() {
+            var request = WebRequest.CreateHttp("http://loading.se/forum.php");
             request.CookieContainer = Session;
-            var task = request.GetResponseAsync();
-            if (!task.Wait(10000)) {
-                throw new Exception("Kunde inte kontakta loading.se!");
-            }
-            var cookies = request.CookieContainer.GetCookies(new Uri(BaseUrl));
+            Debug.WriteLine("Starting request!");
+            var response = await request.GetResponseAsync();
+
+            Debug.WriteLine("Ending request!");
             var htmlDocument = new HtmlDocument();
-            htmlDocument.Load(task.Result.GetResponseStream(), Encoding.GetEncoding("windows-1252"));
+            using (var stream = response.GetResponseStream()) {
+                htmlDocument.Load(stream, Encoding.GetEncoding("windows-1252"));
+            }
+            response.Dispose();
             var nodes = htmlDocument.DocumentNode.Descendants().Where(node => node.Name == "a" && node.Attributes["class"]?.Value == "forum_forum_thread");
-            var entities = nodes.Select(x => new ThreadListThread(x)).ToList();
-            return entities;
+            var cachedImageFetcher = new CachedImageFetcher();
+            return nodes.Select(x => new ThreadListThread(x, cachedImageFetcher)).ToList();
         }
     }
 }

@@ -54,6 +54,8 @@
     <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
     <Reference Include="Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -70,9 +72,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LoadingReader.cs" />
     <Compile Include="BaseActivity.cs" />
     <Compile Include="Fragments\CategoryListFragment.cs" />
     <Compile Include="Fragments\ThreadListFragment.cs" />
+    <Compile Include="ListAdapters\ThreadListAdapter.cs" />
     <Compile Include="LoginActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -97,6 +101,9 @@
     </AndroidResource>
     <AndroidResource Include="Resources\layout\categoryListFragment.axml" />
     <AndroidResource Include="Resources\layout\threadListFragment.axml" />
+    <AndroidResource Include="Resources\layout\threadListItem.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
@@ -117,7 +124,7 @@
     <AndroidResource Include="Resources\drawable\defaultBackground.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\loginHeaderBackground.xml" />
+    <AndroidResource Include="Resources\drawable\headerBackground.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\buttonGradient.xml" />
@@ -206,6 +213,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="LICENSE.txt" />
+    <AndroidResource Include="Resources\menu\thread_list_long_press.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
